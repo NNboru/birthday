@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <style>
+      html{
+        font-family:Helvetica, sans-serif;
+      }
+      input{
+        cursor: pointer;
+      }
+      .form-control-color {
+        max-width: 3rem;
+        height: 3rem;
+        padding: .375rem;
+      }
+      .form-check-inline{
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: center;
+      }
+      .form-control-color:hover {
+        transform: scale(1.03);
+      }
+      .scale{
+        transform:scale(1.5);
+        transition: .2s;
+      }
+      .scale:hover{
+        transform:scale(1.6);
+      }
+      .row{
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(150px, 1fr) );
+      }
+      .row label{
+        padding:4px;
+      }
+    </style>
+
+    <title>Birthday</title>
+  </head>
+  <body>
+    
+    <header class="p-3 bg-dark text-white">
+        <div class="container">
+            <!-- <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+              <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+            </a> -->
+            <h1 class='display-4 text-center font-weight-normal'>Birthday Celebration!!</h1>
+        </div>
+    </header>
+    <br />
+
+    <div class='container'>
+      <form id='myform' onsubmit="return false">
+        <div class="form-group">
+          <label for="bname">Name</label>
+          <input type="name" class="form-control text-primary font-weight-bolder" id="bname" required>
+        </div>
+        <br />
+        <div class="form-group">
+          <label for="bage">New age is <span class='text-primary font-weight-bolder' id='ageval'>20</span></label>
+          <input type="range" class="form-control-range" id="bage" min='1' max='100' value="20">
+        </div>
+        <br />
+        <div class="form-group">
+          <label for="bcolor" class="form-label">Birthday Color <span class='text-primary font-weight-bolder' id='colval'>#563d7c</span></label>
+          <input type="color" class="form-control form-control-color rounded" id="bcolor" value="#563d7c" title="Choose your color">
+        </div>
+        <br />
+        <div class="form-group">
+          <label for="bfrnd">Number of party friends <span class='text-primary font-weight-bolder' id='frndval'>8</span></label>
+          <input type="range" class="form-control-range" id="bfrnd" min='1' max='100' value="8">
+        </div>
+        <br />
+        <div class="form-group">
+          <label for="btime">Party duration <span class='text-primary font-weight-bolder' id='timeval'>2 hr</span></label>
+          <input type="range" class="form-control-range" id="btime" min='10' max='1440' step='10' value="120">
+        </div>
+        <br />
+        <label for="fake-card">Things you might want</label>
+        <div class='container card px-5 py-2'>
+          <div class='row'>
+            <div class="form-check form-check-inline text-align-center">
+              <input class="form-check-input scale " type="checkbox" id="i1">
+              <label class="form-check-label" for="i1">Music</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input scale " type="checkbox" id="i2">
+              <label class="form-check-label" for="i2">Dance</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input scale " type="checkbox" id="i3">
+              <label class="form-check-label" for="i3">Cake</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input scale " type="checkbox" id="i4">
+              <label class="form-check-label" for="i">Drive</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input scale " type="checkbox" id="i5">
+              <label class="form-check-label" for="i">Sleep</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input scale " type="checkbox" id="i6">
+              <label class="form-check-label" for="i">Baloons</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input scale " type="checkbox" id="i7">
+              <label class="form-check-label" for="i">Fast food</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input scale " type="checkbox" id="i8">
+              <label class="form-check-label" for="i">Spa</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input scale " type="checkbox" id="i9">
+              <label class="form-check-label" for="i">Picnic</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input scale " type="checkbox" id="i10">
+              <label class="form-check-label" for="i">Shopping</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input scale " type="checkbox" id="i11">
+              <label class="form-check-label" for="i">Bear</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input scale " type="checkbox" id="i12">
+              <label class="form-check-label" for="i">Drugs</label>
+            </div>
+          </div>
+        </div>
+        <br />
+        <br />
+
+        <div class="form-group">
+          <label for="bpledge">Birthday pledge</label>
+          <textarea class="form-control text-primary font-weight-bolder" id="bpledge" rows="2"></textarea>
+        </div>
+        
+        <br />
+        <div class="form-group">
+          <label for="bemail">Email</label>
+          <input type="email" class="form-control text-primary font-weight-bolder" id="bemail" required>
+        </div>
+
+        <br />
+        <div class='container'>
+          <button type="submit" class="btn btn-primary"  id='saveit'>Submit</button>
+        </div>
+        <br />
+      </form>
+    </div>
+    <br />
+    <br />
+    <br />
+    <div class='bg-dark text-white text-center'>@ no copyrights</div>
+    <!--jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyBm3sqDN6FrkIsy7HzRLxgexHhK93NOaMw",
+        authDomain: "plan-your-birthday.firebaseapp.com",
+        projectId: "plan-your-birthday",
+        storageBucket: "plan-your-birthday.appspot.com",
+        messagingSenderId: "488132807128",
+        appId: "1:488132807128:web:2dcb7bcb3885929136caad",
+        databaseURL: "https://plan-your-birthday-default-rtdb.firebaseio.com/"
+
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <!-- my script -->
+    <script src="./index.js"></script> 
+
+  </body>
+</html>
