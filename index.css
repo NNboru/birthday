@@ -1,0 +1,43 @@
+html{
+    font-family:Helvetica, sans-serif;
+  }
+  input{
+    cursor: pointer;
+  }
+  .form-control-color {
+    max-width: 3rem;
+    height: 3rem;
+    padding: .375rem;
+  }
+  .form-check-inline{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+  }
+  .form-control-color:hover {
+    transform: scale(1.03);
+  }
+  .scale{
+    transform:scale(1.5);
+    transition: .2s;
+  }
+  .scale:hover{
+    transform:scale(1.6);
+  }
+  .row{
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(150px, 1fr) );
+  }
+  .row label{
+    padding:4px;
+  }
+  .toast-div{
+    z-index: 5;
+    top: 0;
+    right:0;
+  }
+  @media (min-width: 992px){
+    .w-lg-60 {
+        width:60%!important;
+    }
+  }
